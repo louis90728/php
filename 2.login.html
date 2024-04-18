@@ -1,14 +1,13 @@
 <html>
     <head>
-        <meta charset="utf-8" />
-        <title>登入範例</title>
+        <meta charset="utf-8" /> // 設置網頁的字符編碼為UTF-8
+        <title>登入範例</title> // 設置網頁的標題為登入範例
     </head>
     <body>
-        <form method=post action="2.login.php">
-            帳號：<input type=text name="id"><br />
-            密碼：<input type=password name="pwd"><p></p>
-            <input type=submit value="登入"> <input type=reset value="清除">
-            
+        <form method=post action="2.login.php"> // 設置表單的提交方法為POST並指定提交到名為"2.login.php"的目標處理頁面
+            帳號：<input type=text name="id"><br /> // 創建一個文本輸入框，用戶可以輸入帳號
+            密碼：<input type=password name="pwd"><p></p> // 創建一個密碼輸入框，用戶可以輸入密碼
+            <input type=submit value="登入"> <input type=reset value="清除"> // 其中一個設置為類型為"submit"，用於提交表單，另一個設置為類型為"reset"用於重置表單中的所有輸入
         </form>
     </body>
 </html>
