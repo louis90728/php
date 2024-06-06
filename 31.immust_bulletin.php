@@ -1,8 +1,8 @@
 <html>
-    <head><title>明新科技大學資訊管理系</title>
+    <head><title>明新科技大學資訊管理系</title> //網頁標題
     <meta charset="utf-8">
-    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet"> //導入外部css
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script> //外部javascript文件和代碼
     <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
     <script>
         $(window).load(function() {
@@ -12,7 +12,7 @@
             });
         });
     </script>
-    <style>
+    <style> //網頁風格設定
         *{
             margin:0;
             color:gray;
@@ -281,10 +281,10 @@
         <div class="bulletin">
            <h1>最新公告</h1>
             <?php
-                $conn=mysqli_connect("db4free.net", "immust", "immustimmust", "immust");
-                $result=mysqli_query($conn, "select * from bulletin");
-                echo "<table border=2><tr><th>佈告編號</th><th>佈告類別</th><th>標題</th><th>佈告內容</th><th>發佈時間</th></tr>";
-                while ($row=mysqli_fetch_array($result)){
+                $conn=mysqli_connect("db4free.net", "immust", "immustimmust", "immust"); //資料庫連線
+                $result=mysqli_query($conn, "select * from bulletin"); //資料庫查詢指令
+                echo "<table border=2><tr><th>佈告編號</th><th>佈告類別</th><th>標題</th><th>佈告內容</th><th>發佈時間</th></tr>"; //建立一個表格
+                while ($row=mysqli_fetch_array($result)){  //建立迴圈抓取資料庫的資料
                     echo "<tr><td>";
                     echo $row["bid"];
                     echo "</td><td>";
@@ -299,8 +299,8 @@
                     echo $row["time"];
                     echo "</td></tr>";
                 }
-                echo "</table>";
-            ?>
+                echo "</table>";  //表格結尾
+            ?> 
         </div>
         <!---佈告欄--->
         <div class="banner" id="introduction">
